@@ -1,12 +1,11 @@
 function cargarDatos() {
-    fetch('prueba.php')
+   
+    fetch('controlador/traerDatosController.php')
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Verifica si los datos se están recibiendo correctamente
         const tablaDatos = document.getElementById('tablaDatos');
         tablaDatos.innerHTML = "";
         data.forEach(row => {
-            console.log(row); // Verifica cada fila de datos
             const tr = document.createElement("tr");
             tr.innerHTML = `
               <td>${row.id}</td>
@@ -27,9 +26,9 @@ function consultarXid(id) {
     fetch(`controlador/traerProductoXidController.php?id=${id}`)
     .then(response => response.json())
     .then(data => {
-        document.getElementById('id').value = data.id; // Asignar el ID del producto al campo oculto (si es necesario)
-        document.getElementById('nombre').value = data.nombre; // Mostrar el nombre del producto en el campo de nombre
-        document.getElementById('Textarea').value = data.descripcion; // Mostrar la descripción del producto en el campo de descripción
+        document.getElementById('id').value = row.id; // Asignar el ID del producto al campo oculto (si es necesario)
+        document.getElementById('nombre').value = row.nombre; // Mostrar el nombre del producto en el campo de nombre
+        document.getElementById('Textarea').value = row.descripcion; // Mostrar la descripción del producto en el campo de descripción
     });
 }
 

@@ -1,6 +1,6 @@
 <?php
-include_once('config/config.php');
-include_once('config/conexion.php');
+include('../config/config.php');
+include('../config/conexion.php');
 
 /*
 //conectarse a la base de datos
