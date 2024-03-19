@@ -1,7 +1,5 @@
 <?php
-include ('modelo/productoDAO.php');
-include_once('../config/config.php');
-include_once('../config/conexion.php');
+include ('../modelo/productoDAO.php');
 
 $pr = new ProductoDAO($_POST['id']);
 $rta=$pr->traerDatosProductoXid ();
