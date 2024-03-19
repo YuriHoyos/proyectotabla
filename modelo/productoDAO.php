@@ -78,7 +78,14 @@ class ProductoDAO {
         $consulta = $db->prepare($query);
         $consulta->execute();
     }
-}
+    
+    public function actProducto () {
+        $db=$this->conexion->Conectar();
+        $query ="UPDATE producto nombre, descripcion SET $this->nombre, $this->descripcion WHERE id=$this->id";
+        $consulta = $db->prepare($query);
+        $consulta->execute();
+  
+    }
 ?>
 
 
