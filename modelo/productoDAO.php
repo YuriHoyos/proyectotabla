@@ -85,6 +85,7 @@ class ProductoDAO {
         $consulta->execute();
   
     }
+    
     public function eliminarProducto() {
         $db=$this->conexion->Conectar();
         $query ="DELETE  FROM producto  WHERE id=$this->id";

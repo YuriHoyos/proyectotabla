@@ -1,6 +1,6 @@
 <?php
 include ('../modelo/productoDAO.php');
-$pr= new ProductoDAO($_POST['nombre'], $_POST['descripcion']);
+$pr= new ProductoDAO($_POST['nombre'], $_POST['descripcion'], $_POST['id']);
 $rta=$pr->actProducto();
-echo ("El cambio fue agregado correctamente");
+
 ?>
