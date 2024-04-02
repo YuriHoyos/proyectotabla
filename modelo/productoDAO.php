@@ -71,7 +71,6 @@ class ProductoDAO {
         return $resultados;
     }
 
-
     public function addProductos () {
         $db=$this->conexion->Conectar();
         $query ="INSERT INTO producto (nombre, descripcion) VALUES ('$this->nombre', '$this->descripcion')";
