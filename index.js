@@ -12,7 +12,7 @@ function cargarDatos() {
               <td>${row.nombre}</td>
               <td>${row.descripcion}</td>
               <td>
-              <button class="btn btn-primary" onclick="consultarXid(${row.id})">Actualizar</button>
+              <button id="actualizar" class="btn btn-primary" onclick="consultarXid(${row.id})" data-toggle="modal" data-target="#exampleModal" >Actualizar</button>
             </td>
               `;
             tablaDatos.appendChild(tr);
