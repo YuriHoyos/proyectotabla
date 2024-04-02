@@ -51,7 +51,7 @@ class ProductoDAO {
 
         $this->nombre=$nom;
         $this->descripcion=$desc;
-        $this->$id=$id;
+        $this->id=$id;
         $this->conexion=new Conexion (DB_HOST, DB_USER, DB_PASS, DB_NAME);
         
     }
