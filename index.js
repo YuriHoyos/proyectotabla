@@ -26,9 +26,9 @@ function consultarXid(id) {
     fetch(`controlador/traerProductoXidController.php?id=${id}`)
     .then(response => response.json())
     .then(data => {
-        document.getElementById('id').value = row.id; // Asignar el ID del producto al campo oculto (si es necesario)
-        document.getElementById('nombre').value = row.nombre; // Mostrar el nombre del producto en el campo de nombre
-        document.getElementById('Textarea').value = row.descripcion; // Mostrar la descripción del producto en el campo de descripción
+        document.getElementById('id').value = data.id; // Asignar el ID del producto al campo oculto (si es necesario)
+        document.getElementById('nombre').value = data.nombre; // Mostrar el nombre del producto en el campo de nombre
+        document.getElementById('Textarea').value = data.descripcion; // Mostrar la descripción del producto en el campo de descripción
     });
 }
 
