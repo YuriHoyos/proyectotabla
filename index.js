@@ -13,6 +13,7 @@ function cargarDatos() {
               <td>${row.descripcion}</td>
               <td>
               <button id="actualizar" class="btn btn-primary" onclick="consultarXid(${row.id})" data-toggle="modal" data-target="#exampleModal" >Actualizar</button>
+              <button id="eliminar" class="btn btn-primary" onclick="eliminarProducto(${row.id})" data-toggle="modal" data-target="#exampleModal" >Eliminar</button>
             </td>
               `;
             tablaDatos.appendChild(tr);
@@ -47,6 +48,20 @@ function actualizarProducto(formData) {
 }
 function agregarDatos(formData) {
     fetch('controlador/agregarProductoController.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        cargarDatos();
+        alert(data);
+    });
+}
+function eliminarProducto(id) {
+    const formData = new FormData();
+    formData.append('id_producto', idProducto);
+
+    fetch('controlador/eliminarProductoController.php', {
         method: 'POST',
         body: formData
     })
