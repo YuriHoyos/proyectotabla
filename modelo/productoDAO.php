@@ -80,7 +80,7 @@ class ProductoDAO {
 
     public function actProducto () {
         $db=$this->conexion->Conectar();
-        $query ="UPDATE producto nombre, descripcion SET $this->nombre, $this->descripcion WHERE id=$this->id";
+        $query ="UPDATE producto SET nombre=$this->nombre, descripcion=$this->descripcion WHERE id=$this->id";
         $consulta = $db->prepare($query);
         $consulta->execute();
   

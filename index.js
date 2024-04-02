@@ -12,8 +12,8 @@ function cargarDatos() {
               <td>${row.nombre}</td>
               <td>${row.descripcion}</td>
               <td>
-              <button id="actualizar" class="btn btn-primary" onclick="consultarXid(${row.id})" data-toggle="modal" data-target="#exampleModal" >Actualizar</button>
-              <button id="eliminar" class="btn btn-primary" onclick="eliminarProducto(${row.id})" data-toggle="modal" data-target="#exampleModal" >Eliminar</button>
+              <button id="actualizar" class="btn btn-primary" onclick="actualizarProducto(${row.id})" data-toggle="modal" data-target="#exampleModal" >Actualizar</button>
+              <button id="eliminar" class="btn btn-primary" onclick="eliminarProducto(${row.id})>Eliminar</button>
             </td>
               `;
             tablaDatos.appendChild(tr);
